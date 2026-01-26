@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>COMI打 - Comida Latina Typing</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka+One&family=Noto+Sans+JP:wght@400;700&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+
+    <div id="game-container">
+        <!-- Background Layer -->
+        <div id="background-layer"></div>
+
+        <!-- Start Screen -->
+        <div id="start-screen" class="screen active">
+            <div class="logo-container">
+                <img src="assets/comida_logo.png" alt="COMI打" id="game-logo">
+                <p class="subtitle">Comida Latina Typing</p>
+                <p class="birthday-msg">🎉 Tatsumaru Happy Birthday! 🎉</p>
+            </div>
+
+            <div class="difficulty-select">
+                <h2>Select Mascaras Sauce Level</h2>
+                <div class="sauce-bottles">
+                    <button class="sauce-btn" id="btn-easy" data-level="easy" onclick="startGame('easy')">
+                        <div class="bottle-wrapper">
+                            <img src="assets/sauce_white.png" alt="White Label">
+                            <span class="label-overlay">MAS<br>DARAS</span>
+                        </div>
+                        <span>White Label<br>★☆☆☆☆</span>
+                    </button>
+                    <button class="sauce-btn" id="btn-normal" data-level="medium" onclick="startGame('medium')">
+                        <div class="bottle-wrapper">
+                            <img src="assets/sauce_red.png" alt="Red Label">
+                            <!-- Note: using white PNG with filter in CSS -->
+                            <span class="label-overlay">MAS<br>DARAS</span>
+                        </div>
+                        <span>Red Label<br>★★★☆☆</span>
+                    </button>
+                    <button class="sauce-btn" id="btn-hard" data-level="hard" onclick="startGame('hard')">
+                        <div class="bottle-wrapper">
+                            <img src="assets/sauce_black.png" alt="Black Label">
+                            <!-- Note: using white PNG with filter in CSS -->
+                            <span class="label-overlay">MAS<br>DARAS</span>
+                        </div>
+                        <span>Black Label<br>★★★★★</span>
+                    </button>
+                </div>
+            </div>
+            <div class="instructions">
+                <p>Type the menu items before they disappear!</p>
+            </div>
+            <div class="date-display">2026/1/26</div>
+        </div>
+
+        <!-- Gameplay Screen -->
+        <div id="play-screen" class="screen">
+            <div class="hud">
+                <div class="time-container">
+                    <div id="time-bar"></div>
+                </div>
+                <div class="score-board">
+                    <div class="score-box">SCORE: <span id="score">0</span></div>
+                    <div class="combo-box">COMBO: <span id="combo">0</span></div>
+                </div>
+            </div>
+
+            <div id="typing-area">
+                <div id="word-display">
+                    <div id="japanese-text"></div>
+                    <div id="kana-text"></div>
+                    <!-- The Romaji actively being typed -->
+                    <div id="romaji-text">
+                        <span id="typed-part"></span><span id="untyped-part"></span>
+                    </div>
+                </div>
+                <div id="correct-effect">〇</div>
+                <div id="feedback-message"></div>
+            </div>
+
+            <!-- Bonus Overlay (Hidden by default) -->
+            <div id="bonus-overlay" class="hidden">
+                <div class="bonus-content">
+                    <img src="assets/tatsumaru_special.jpg" alt="Special Memory">
+                    <p class="bonus-text">✨ HAPPY BIRTHDAY! ✨</p>
+                    <button onclick="closeBonus()">Close</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Result Screen -->
+        <div id="result-screen" class="screen">
+            <div class="result-card">
+                <h2>TIME UP!</h2>
+                <div class="final-score">
+                    SCORE: <span id="final-score-val">0</span>
+                </div>
+                <div class="stats">
+                    <p>Accuracy: <span id="accuracy-val">0</span>%</p>
+                    <p>Typed Keys: <span id="typed-count-val">0</span></p>
+                    <p>Rank: <span id="rank-title">Amigo</span></p>
+                </div>
+                <button class="restart-btn" onclick="returnToTitle()">Return to Title</button>
+            </div>
+        </div>
+
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
