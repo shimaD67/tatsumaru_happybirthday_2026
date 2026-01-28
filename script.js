@@ -90,8 +90,8 @@ const WORD_DATA = {
 };
 
 const GAME_SETTINGS = {
-    easy: { time: 60, scorePerChar: 10 },
-    medium: { time: 90, scorePerChar: 20 },
+    easy: { time: 60, scorePerChar: 100 },
+    medium: { time: 90, scorePerChar: 75 },
     hard: { time: 120, scorePerChar: 50 },
 };
 
@@ -440,6 +440,7 @@ function endGame() {
     if (currentState.score > 3000) rank = "COSTA常連客";
     if (currentState.score > 6000) rank = "テキーラマエストロ";
     if (currentState.score > 10000) rank = "伝説のマスカラサー";
+    if (currentState.score > 20000) rank = "https://costa-kyoto.jp/recruit.html";
     document.getElementById('rank-title').textContent = rank;
 }
 
@@ -730,5 +731,6 @@ window.closeBonus = function () { // Global for onclick
     startTimer(); // Resume timer
     startBGM(); // Resume music
 };
+
 
 
