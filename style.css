@@ -200,6 +200,18 @@ body {
     color: var(--accent-green);
 }
 
+.escape {
+    display: flex;
+    justify-content: space-between;
+    font-family: 'Fredoka One', cursive;
+    font-size: 1.5rem;
+    padding: 0 10px;
+}
+
+.escape-inst {
+    color: var(--accent-white);
+}
+
 /* Typing Area */
 #typing-area {
     margin-top: 80px;
@@ -546,3 +558,4 @@ body {
     }
 
 }
+
