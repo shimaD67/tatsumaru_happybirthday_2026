@@ -73,7 +73,7 @@ body {
 
 #game-logo {
     max-width: 450px;
-    filter: drop-shadow(0 0 10px var(--primary-orange));
+    /* filter: drop-shadow(0 0 10px var(--primary-orange)); */
 }
 
 .subtitle {
@@ -544,4 +544,5 @@ body {
     #romaji-text {
         font-size: 1.5rem;
     }
+
 }
