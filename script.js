@@ -4,7 +4,7 @@ const WORD_DATA = {
         { ja: "達丸誕生日おめでとう", kana: "たつまるたんじょうびおめでとう" },
         { ja: "タコス", kana: "たこす" },
         { ja: "ブリトー", kana: "ぶりとー" },
-        { ja: "コロナビール", kana: "ころな" },
+        { ja: "コロナビール", kana: "ころなびーる" },
         { ja: "テキーラ", kana: "てきーら" },
         { ja: "コスタ", kana: "こすた" },
         { ja: "京都", kana: "きょうと" },
@@ -731,6 +731,7 @@ window.closeBonus = function () { // Global for onclick
     startTimer(); // Resume timer
     startBGM(); // Resume music
 };
+
 
 
 
